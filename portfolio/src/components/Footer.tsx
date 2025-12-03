@@ -23,8 +23,13 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-slate-900 text-white">
-      <div className="container mx-auto px-6 py-12">
+    <footer className="bg-slate-900 text-white relative overflow-hidden border-t border-slate-800">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
+      <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-float"></div>
+      <div className="absolute bottom-0 right-0 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-float-slow" style={{ animationDelay: '1s' }}></div>
+
+      <div className="container mx-auto px-6 py-12 relative z-10">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-4">

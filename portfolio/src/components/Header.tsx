@@ -26,7 +26,7 @@ export default function Header({ isScrolled }: HeaderProps) {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-lg'
+          ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-slate-800'
           : 'bg-transparent'
       }`}
     >
@@ -52,7 +52,7 @@ export default function Header({ isScrolled }: HeaderProps) {
                   e.preventDefault();
                   scrollToSection(item.href);
                 }}
-                className="text-slate-700 hover:text-blue-600 font-medium transition-colors relative group"
+                className="text-slate-300 hover:text-blue-400 font-medium transition-colors relative group"
               >
                 {item.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all group-hover:w-full"></span>
@@ -62,7 +62,7 @@ export default function Header({ isScrolled }: HeaderProps) {
 
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-slate-700 hover:text-blue-600 transition-colors"
+            className="md:hidden text-slate-300 hover:text-blue-400 transition-colors"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -78,7 +78,7 @@ export default function Header({ isScrolled }: HeaderProps) {
                   e.preventDefault();
                   scrollToSection(item.href);
                 }}
-                className="block text-slate-700 hover:text-blue-600 font-medium transition-colors py-2"
+                className="block text-slate-300 hover:text-blue-400 font-medium transition-colors py-2"
               >
                 {item.label}
               </a>

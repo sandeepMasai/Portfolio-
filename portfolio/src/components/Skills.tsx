@@ -49,15 +49,27 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-20 md:py-32 bg-slate-50/50">
-      <div className="container mx-auto px-6">
+    <section id="skills" className="py-20 md:py-32 relative overflow-hidden">
+      {/* Animated Dark Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
+
+      {/* Animated Gradient Blobs */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-float"></div>
+      <div className="absolute bottom-0 right-0 w-80 h-80 bg-cyan-500/20 rounded-full blur-3xl animate-float-slow" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute top-1/2 left-1/3 w-72 h-72 bg-purple-500/15 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+
+      {/* Animated floating shapes */}
+      <div className="absolute top-1/4 left-1/4 w-20 h-20 bg-blue-400/15 rounded-full blur-xl animate-float"></div>
+      <div className="absolute bottom-1/3 right-1/3 w-16 h-16 bg-cyan-400/15 rounded-full blur-xl animate-float-slow" style={{ animationDelay: '1s' }}></div>
+
+      <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Skills & Expertise
             </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-cyan-500 mx-auto mb-6"></div>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto mb-6"></div>
+            <p className="text-lg text-slate-300 max-w-2xl mx-auto">
               A comprehensive toolkit of modern technologies and frameworks to bring ideas to life
             </p>
           </div>
@@ -66,7 +78,7 @@ export default function Skills() {
             {skillCategories.map((category, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all border border-slate-100"
+                className="bg-slate-800/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all border border-slate-700/50"
               >
                 <div className="flex items-center mb-6">
                   <div
@@ -74,17 +86,17 @@ export default function Skills() {
                   >
                     <category.icon className="text-white" size={24} />
                   </div>
-                  <h3 className="text-2xl font-bold text-slate-900">{category.title}</h3>
+                  <h3 className="text-2xl font-bold text-white">{category.title}</h3>
                 </div>
 
                 <div className="space-y-4">
                   {category.skills.map((skill, skillIndex) => (
                     <div key={skillIndex}>
                       <div className="flex justify-between mb-2">
-                        <span className="text-slate-700 font-medium">{skill.name}</span>
-                        <span className="text-slate-500 text-sm">{skill.level}%</span>
+                        <span className="text-slate-200 font-medium">{skill.name}</span>
+                        <span className="text-slate-400 text-sm">{skill.level}%</span>
                       </div>
-                      <div className="h-2 bg-slate-200 rounded-full overflow-hidden">
+                      <div className="h-2 bg-slate-700/50 rounded-full overflow-hidden">
                         <div
                           className={`h-full bg-gradient-to-r ${category.color} rounded-full transition-all duration-1000 ease-out`}
                           style={{ width: `${skill.level}%` }}

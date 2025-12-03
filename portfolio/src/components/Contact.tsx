@@ -53,38 +53,50 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-20 md:py-32 bg-slate-50/50">
-      <div className="container mx-auto px-6">
+    <section id="contact" className="py-20 md:py-32 relative overflow-hidden">
+      {/* Animated Dark Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
+
+      {/* Animated Gradient Blobs */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-float"></div>
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-cyan-500/20 rounded-full blur-3xl animate-float-slow" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute top-1/2 right-1/3 w-72 h-72 bg-purple-500/15 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+
+      {/* Animated floating shapes */}
+      <div className="absolute top-1/3 left-1/4 w-20 h-20 bg-blue-400/15 rounded-full blur-xl animate-float"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-16 h-16 bg-cyan-400/15 rounded-full blur-xl animate-float-slow" style={{ animationDelay: '1s' }}></div>
+
+      <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Get In Touch</h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-cyan-500 mx-auto mb-6"></div>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Get In Touch</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto mb-6"></div>
+            <p className="text-lg text-slate-300 max-w-2xl mx-auto">
               Have a project in mind or want to collaborate? I'd love to hear from you!
             </p>
           </div>
 
           <div className="grid lg:grid-cols-5 gap-12">
             <div className="lg:col-span-2 space-y-6">
-              <div className="bg-white rounded-2xl p-8 shadow-lg border border-slate-100">
-                <h3 className="text-2xl font-bold text-slate-900 mb-6">Contact Information</h3>
+              <div className="bg-slate-800/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-slate-700/50">
+                <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
                 <div className="space-y-6">
                   {contactInfo.map((item, index) => (
                     <div key={index} className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
                         <item.icon className="text-white" size={20} />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-slate-900 mb-1">{item.title}</h4>
+                        <h4 className="font-semibold text-white mb-1">{item.title}</h4>
                         {item.link ? (
                           <a
                             href={item.link}
-                            className="text-slate-600 hover:text-blue-600 transition-colors"
+                            className="text-slate-300 hover:text-blue-400 transition-colors"
                           >
                             {item.content}
                           </a>
                         ) : (
-                          <p className="text-slate-600">{item.content}</p>
+                          <p className="text-slate-300">{item.content}</p>
                         )}
                       </div>
                     </div>
@@ -92,7 +104,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-600 to-cyan-500 rounded-2xl p-8 shadow-lg text-white">
+              <div className="bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl p-8 shadow-lg text-white border border-blue-400/30">
                 <h3 className="text-2xl font-bold mb-4">Let's Build Something Amazing</h3>
                 <p className="opacity-90">
                   Whether you have a question, a project idea, or just want to connect, feel free to
@@ -102,11 +114,11 @@ export default function Contact() {
             </div>
 
             <div className="lg:col-span-3">
-              <div className="bg-white rounded-2xl p-8 shadow-lg border border-slate-100">
+              <div className="bg-slate-800/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-slate-700/50">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
+                      <label htmlFor="name" className="block text-sm font-medium text-slate-200 mb-2">
                         Your Name
                       </label>
                       <input
@@ -116,12 +128,12 @@ export default function Contact() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
+                        className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-white placeholder:text-slate-500"
                         placeholder="Enter Name"
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
+                      <label htmlFor="email" className="block text-sm font-medium text-slate-200 mb-2">
                         Your Email
                       </label>
                       <input
@@ -131,14 +143,14 @@ export default function Contact() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
+                        className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-white placeholder:text-slate-500"
                         placeholder="Enter Email"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-slate-700 mb-2">
+                    <label htmlFor="subject" className="block text-sm font-medium text-slate-200 mb-2">
                       Subject
                     </label>
                     <input
@@ -148,13 +160,13 @@ export default function Contact() {
                       value={formData.subject}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-white placeholder:text-slate-500"
                       placeholder="Project Inquiry"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
+                    <label htmlFor="message" className="block text-sm font-medium text-slate-200 mb-2">
                       Message
                     </label>
                     <textarea
@@ -164,7 +176,7 @@ export default function Contact() {
                       onChange={handleChange}
                       required
                       rows={6}
-                      className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all resize-none"
+                      className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none text-white placeholder:text-slate-500"
                       placeholder="Tell me about your project..."
                     ></textarea>
                   </div>
@@ -172,7 +184,7 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-lg font-medium hover:shadow-lg hover:scale-105 transition-all disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-2"
+                    className="w-full px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-lg font-medium hover:shadow-lg hover:scale-105 transition-all disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-2"
                   >
                     {isSubmitting ? (
                       <>
@@ -188,7 +200,7 @@ export default function Contact() {
                   </button>
 
                   {submitStatus === 'success' && (
-                    <div className="p-4 bg-green-50 border border-green-200 text-green-800 rounded-lg text-center">
+                    <div className="p-4 bg-green-900/30 border border-green-500/50 text-green-300 rounded-lg text-center">
                       Thank you! Your message has been sent successfully.
                     </div>
                   )}
