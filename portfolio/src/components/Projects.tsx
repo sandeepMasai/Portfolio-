@@ -6,7 +6,7 @@ export default function Projects() {
       title: 'Online Quiz Application',
       description:
         'A full-stack Online Assessment Portal built with React and Node.js, featuring role-based access control, real-time assessments, and comprehensive question management',
-      image: '/src/assets/image_quiz.png',
+      image: '/assets/image_quiz.png',
       tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS'],
       github: 'https://github.com/sandeepMasai/Online-Quiz-Application.git',
       demo: 'https://online-quiz-application-1-un43.onrender.com/',
@@ -15,7 +15,7 @@ export default function Projects() {
     {
       title: 'Micro-Skill-Builder',
       description: 'Micro-Skill-Builder is a micro-learning platform frontend built with React. It provides a clean, engaging UI for learners, instructors, and admins to interact with the backend APIs: browse courses, enroll, track XP & badges, take quizzes, and manage content',
-      image: '/src/assets/micro skill.png',
+      image: '/assets/micro skill.png',
       tags: ['React', 'JWT-based authentication', 'MongoDB', 'Tailwind', 'State Management'],
       github: 'https://github.com/sandeepMasai/Micro-Skill-Builder.git',
       demo: 'https://micro-skill-builder-frontend.onrender.com/',
@@ -24,7 +24,7 @@ export default function Projects() {
     {
       title: 'Candidate Referral  Dashboard',
       description: 'Candidate Referral Management SystemA full-stack web application for managing candidate referrals with user authentication, role-based access control, and cloud-based resume storage.',
-      image: '/src/assets/referral Dashboard.png',
+      image: '/assets/referral Dashboard.png',
       tags: ['React.js', 'Chart.js', 'REST API', 'MongoDB'],
       github: 'https://github.com/sandeepMasai/Candidate-Referral-Management-System.git',
       demo: 'https://candidate-referral-management-system-1-ixmp.onrender.com/login',
@@ -33,7 +33,7 @@ export default function Projects() {
     {
       title: 'Weather Forecast App',
       description: 'Weather App A real-time weather web application built using HTML, CSS, and JavaScript. This app allows users to search for any city and view the current weather, a city map, and a 5-day weather forecast using public APIs',
-      image: '/src/assets/weather App.png',
+      image: '/assets/weather App.png',
       tags: ['HTML', 'Weather API', 'Geolocation', 'CSS', 'Javascript'],
       github: 'https://github.com/sandeepMasai/Weather-App.git',
       demo: 'https://venerable-valkyrie-1ff6fb.netlify.app/',
@@ -42,7 +42,7 @@ export default function Projects() {
     {
       title: 'MediQuick',
       description: 'MediQuick is a fully responsive, modern e-commerce platform designed for an online pharmacy. Built with React, Tailwind CSS, and ShadCN UI, it offers a seamless user experience across devices. The platform focuses on intuitive interactions, secure prescription handling, and real-time order tracking.',
-      image: '/src/assets/MediQuick.png',
+      image: '/assets/MediQuick.png',
       tags: ['React', 'Tailwind CSS', 'ShadCN UI ', 'Context API', 'React Router DOM'],
       github: 'https://github.com/sandeepMasai/Online-Pharmacy-.git',
       demo: 'https://gentle-dasik-015e65.netlify.app/',
@@ -52,7 +52,7 @@ export default function Projects() {
       title: 'books-library-management',
       description:
         'Comprehensive fitness tracking app with workout plans, progress tracking, nutrition logging, and social features.',
-      image: '/src/assets/book-m.png',
+      image: '/assets/book-m.png',
       tags: ['React', 'Tailwind CSS', 'Context API', 'React Router DOM'],
       github: 'https://github.com/sandeepMasai/Books-Library-Management.git',
       demo: 'https://books-library-management-1-30t8.onrender.com',
@@ -62,7 +62,7 @@ export default function Projects() {
     {
       title: 'MediLab ',
       description: 'MediLab is a modern, responsive medical laboratory website template built with HTML, CSS, and Bootstrap. It includes a Home page, About Us, Services, and Contact pages, all designed to showcase medical services. Easily customizable by updating text, images',
-      image: '/src/assets/medLab.png',
+      image: '/assets/medLab.png',
       tags: [' HTML', ' CSS', ' Bootstrap', 'responsive', 'Font Awesome Icons'],
       github: 'https://github.com/sandeepMasai/medilab.git',
       demo: 'https://678bfc0ac2d5bacb6295a4c6--gorgeous-crisp-3c0e40.netlify.app/#departments',
