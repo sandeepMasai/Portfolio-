@@ -6,9 +6,21 @@ import weatherImg from '../assets/weather App.png';
 import mediQuickImg from '../assets/MediQuick.png';
 import bookImg from '../assets/book-m.png';
 import medLabImg from '../assets/medLab.png';
+import debug2 from "../assets/debug.png"
 
 export default function Projects() {
   const projects = [
+     {
+      title: 'Online Quiz Application',
+      description:
+        'A full-stack Online Assessment Portal built with React and Node.js, featuring role-based access control, real-time assessments, and comprehensive question management',
+        image: debug2,
+      tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS','OpenAI API (gpt-4o-mini)','Express Rate Limit'],
+      github: 'https://github.com/sandeepMasai/Code-Bug-Finder.git',
+      demo: 'http://16.16.241.247/',
+      gradient: 'from-blue-600 to-cyan-500',
+    },
+    
     {
       title: 'Online Quiz Application',
       description:
